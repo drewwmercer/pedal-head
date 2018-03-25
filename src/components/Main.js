@@ -5,7 +5,8 @@ export default class Main extends Component {
     return (
       <div>
         <p className="App-intro">
-          Hello {this.props.name}, to get started, edit <code>src/App.js</code> and save to reload.
+          Hello, {this.props.name}.<br/>
+          Do you want to see the secret area? <a href="/secret">Click here</a>
         </p>
       </div>
     );
