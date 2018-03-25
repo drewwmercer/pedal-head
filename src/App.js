@@ -8,21 +8,20 @@ import Callback from './components/Callback';
 
 class App extends Component {
   render() {
-let mainComponent = "";
-switch(this.props.location) {
-  case "":
-    mainComponent = <Main {...this.props}/>;
-    break;
-  case "callback": 
-    mainComponent = <Callback />
-    break;
-  case "secret":
-    mainComponent = <Secret />;
-    break;
-  default:
-    mainComponent = <NotFound />;
-
-}
+    let mainComponent = '';
+    switch (this.props.location) {
+      case '':
+        mainComponent = <Main {...this.props} />;
+        break;
+      case 'callback':
+        mainComponent = <Callback />;
+        break;
+      case 'secret':
+        mainComponent = auth.isAuthenticated() ? <Secret /> : <NotFound />;
+        break;
+      default:
+        mainComponent = <NotFound />;
+    }
 
     return (
       <div className="App">
@@ -30,7 +29,7 @@ switch(this.props.location) {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React, {this.props.name}</h1>
         </header>
-       {mainComponent}
+        {mainComponent}
       </div>
     );
   }
