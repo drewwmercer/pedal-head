@@ -11,7 +11,7 @@ class App extends Component {
 let mainComponent = "";
 switch(this.props.location) {
   case "":
-    mainComponent = <Main />;
+    mainComponent = <Main {...this.props}/>;
     break;
   case "callback": 
     mainComponent = <Callback />
