@@ -27,7 +27,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React, {this.props.name}</h1>
+          <h1 className="App-title">Welcome to Pedalhead, {this.props.name}!</h1>
         </header>
         {mainComponent}
       </div>
