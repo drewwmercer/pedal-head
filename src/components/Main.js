@@ -13,7 +13,7 @@ export default class Main extends Component {
             <hr/>
             Please login to begin.
             <hr/>
-            <button>Login</button>
+            <button onClick={this.props.auth.login}>Login</button>
             </div>
       </div>
     );
