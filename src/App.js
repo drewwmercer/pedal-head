@@ -17,7 +17,7 @@ class App extends Component {
         mainComponent = <Callback />;
         break;
       case 'secret':
-        mainComponent = this.props.auth.isAuthenticated() ? <Secret /> : <NotFound />;
+        mainComponent = this.props.auth.isAuthenticated() ? <Secret {...this.props} /> : <NotFound />;
         break;
       default:
         mainComponent = <NotFound />;

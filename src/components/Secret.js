@@ -5,7 +5,9 @@ export default class Secret extends Component {
     return (
       <div>
         <p>
-          This area is secret.
+          This area is secret. Click to return <a href='/'>home</a>.
+          <br/>
+          <button onClick={this.props.auth.logout}>Logout</button>
         </p>
       </div>
     );
