@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Main from "./components/Main";
 import Secret from "./components/Secret";
+import NotFound from './components/NotFound';
 
 class App extends Component {
   render() {
@@ -15,7 +16,7 @@ switch(this.props.location) {
     mainComponent = <Secret />;
     break;
   default:
-    mainComponent = <Main />;
+    mainComponent = <NotFound />;
 
 }
 
